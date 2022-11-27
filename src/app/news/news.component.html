@@ -1,0 +1,7 @@
+<div *ngFor="let new of news">
+  <a [routerLink]="['/news',new.id]">Title: {{new.title}}</a>
+</div>
+<hr>
+<div>
+  <router-outlet></router-outlet>
+</div>

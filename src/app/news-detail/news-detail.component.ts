@@ -21,6 +21,15 @@ export class NewsDetailComponent implements OnInit {
       const id = params['id']
       this.news = this.newsService.news.find(eachObj => eachObj.id === +id)
     })
-  }
 
+    const queryParams = this.route.snapshot.queryParams
+    this.route.queryParams.subscribe(params=>{
+      console.log(params)
+
+  })
+    const fragment = this.route.snapshot.fragment
+    this.route.fragment.subscribe(params=>{
+    console.log(params)
+  })
+ }
 }

@@ -1,5 +1,9 @@
 <div *ngFor="let new of news">
-  <a [routerLink]="['/news',new.id]">Title: {{new.title}}</a>
+  <a 
+  [routerLink]="['/news/detail',new.id]" 
+  [queryParams]="{page: 1, size:10, title: new.title}"
+  [fragment]="new.title"
+  >Title: {{new.title}}</a>
 </div>
 <hr>
 <div>
